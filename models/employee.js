@@ -12,8 +12,7 @@ const Employee = new Schema(
     image: { type: String },
     company_id: {
       type: Schema.Types.ObjectId,
-      ref: 'company_id',
-      required: true
+      ref: 'company_id'
     }
   },
   { timestamps: true }
