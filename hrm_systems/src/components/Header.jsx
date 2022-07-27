@@ -3,13 +3,13 @@ import { Link } from 'react-router-dom'
 const Header = () => {
   return (
     <nav>
-      <Link to="/" class="link">
+      <Link to="/" className="link">
         Home
       </Link>
-      <Link to="/companies" class="link">
+      <Link to="/companies" className="link">
         Companies
       </Link>
-      <Link to="/employees" class="link">
+      <Link to="/employees" className="link">
         Employees
       </Link>
     </nav>
