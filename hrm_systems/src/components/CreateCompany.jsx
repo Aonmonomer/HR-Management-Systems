@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const CreateCompany = () => {
   const [newCompanies, setNewCompanies] = useState([])
@@ -16,7 +17,7 @@ const CreateCompany = () => {
   useEffect(() => {
     const getNewCompanies = async () => {
       try {
-        let res = await axios.get('http://localhost:3001/companies')
+        let res = await axios.get('http://localhost:3001/api/companies')
         console.log(res.data)
         setNewCompanies(res.data)
       } catch (err) {
@@ -33,7 +34,7 @@ const CreateCompany = () => {
   const handleSubmit = async (event) => {
     event.preventDefault()
     // do something with the data in the component state
-    let res = await axios.post('http://localhost:3001/companies', formState)
+    let res = await axios.post('http://localhost:3001/api/companies', formState)
     console.log(res)
     // clear the form
     setFormState(initialState)
@@ -73,6 +74,7 @@ const CreateCompany = () => {
         />
         <button type="submit">Create</button>
       </form>
+      <Link to="/companies">Back</Link>
     </div>
   )
 }
