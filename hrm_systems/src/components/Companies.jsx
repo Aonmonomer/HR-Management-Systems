@@ -11,7 +11,7 @@ const Companies = (props) => {
     const getCompanies = async () => {
       try {
         let res = await axios.get('http://localhost:3001/api/companies')
-        console.log(res.data.companies)
+
         setCompanies(res.data.companies)
       } catch (err) {
         console.log(err)
@@ -21,7 +21,7 @@ const Companies = (props) => {
   }, [])
 
   const showCompany = (company) => {
-    navigate(`${company.id}`)
+    navigate(`${company._id}`)
   }
 
   const goToCreateCompany = () => {
