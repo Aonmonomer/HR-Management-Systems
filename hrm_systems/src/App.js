@@ -6,6 +6,7 @@ import Home from './pages/Home'
 import Companies from './components/Companies'
 import { useState } from 'react'
 import CompanyDetails from './components/CompanyDetails'
+import CreateCompany from './components/CreateCompany'
 
 function App() {
   // const [companies, setCompanies] = useState['']
@@ -19,6 +20,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/companies" element={<Companies />} />
           <Route path="/companies/:id" element={<CompanyDetails />} />
+          <Route path="/createcompany" element={<CreateCompany />} />
         </Routes>
       </main>
     </div>

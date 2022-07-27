@@ -5,7 +5,7 @@ const Company = new Schema(
   {
     companyName: { type: String, required: true },
     companyPhone: { type: Number, required: true },
-    companyUrl: { type: String, required: true },
+    companyUrl: { type: String },
     companyAddress: { type: String, required: true }
   },
   { timestamps: true }

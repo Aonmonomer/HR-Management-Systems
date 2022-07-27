@@ -24,6 +24,10 @@ const Companies = (props) => {
     navigate(`${company.id}`)
   }
 
+  const goToCreateCompany = () => {
+    navigate('/createcompany')
+  }
+
   return (
     <div className="company-grid">
       <h1>Companies in the system: </h1>
@@ -34,6 +38,7 @@ const Companies = (props) => {
           </div>
         ))}
       </div>
+      <button onClick={() => goToCreateCompany()}>Create new company</button>
       <Link to="/">Back</Link>
     </div>
   )
