@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 
-const Companies = (props) => {
+const Companies = () => {
   const [companies, setCompanies] = useState([])
   let navigate = useNavigate()
 
@@ -30,7 +30,7 @@ const Companies = (props) => {
 
   return (
     <div className="company-grid">
-      <h1>Companies in the system: </h1>
+      <h1>Companies in the systems: </h1>
       <div>
         {companies.map((company) => (
           <div onClick={() => showCompany(company)} key={company.id}>
