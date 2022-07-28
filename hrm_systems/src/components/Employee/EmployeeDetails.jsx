@@ -38,7 +38,7 @@ const EmployeeDetails = () => {
     event.preventDefault()
     // do something with the data in the component state
     let res = await axios.put(
-      `http://localhost:3001/api/companies/${id}`,
+      `http://localhost:3001/api/employees/${id}`,
       formState
     )
     console.log(res)
@@ -48,50 +48,74 @@ const EmployeeDetails = () => {
   const deleteCompany = async () => {
     // do something with the data in the component state
     let res = await axios.delete(
-      `http://localhost:3001/api/companies/${id}`,
+      `http://localhost:3001/api/employees/${id}`,
       formState
     )
-    navigate('/companies')
+    navigate('/employees')
   }
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="companyName">Company Name:</label>
+        <label htmlFor="employeeName">Employee Name:</label>
         <input
           type="text"
-          id="companyName"
+          id="name"
           onChange={handleChange}
-          value={formState.companyName}
-          placeholder={company.companyName}
+          value={formState.name}
+          placeholder={employee.name}
         />
-        <label htmlFor="companyPhone">Company Phone:</label>
+        <label htmlFor="employeeSSN">Employee SSN:</label>
         <input
           type="text"
-          id="companyPhone"
+          id="SSN"
           onChange={handleChange}
-          value={formState.companyPhone}
-          placeholder={company.companyPhone}
+          value={formState.SSN}
+          placeholder={employee.SSN}
         />
-        <label htmlFor="companyUrl">Company Url:</label>
+        <label htmlFor="employeeEmail">Employee Email:</label>
         <input
           type="text"
-          id="companyUrl"
+          id="email"
           onChange={handleChange}
-          value={formState.companyUrl}
-          placeholder={company.companyUrl}
+          value={formState.email}
+          placeholder={employee.email}
         />
-        <label htmlFor="companyAddress">Company Address:</label>
+        <label htmlFor="employeePosition">Employee Position:</label>
         <input
           type="text"
-          id="companyAddress"
+          id="position"
           onChange={handleChange}
-          value={formState.companyAddress}
-          placeholder={company.companyAddress}
+          value={formState.position}
+          placeholder={employee.position}
         />
-        <button type="submit">Update company profile</button>
+        <label htmlFor="employeeBirthdate">Employee Birthdate:</label>
+        <input
+          type="text"
+          id="birthdate"
+          onChange={handleChange}
+          value={formState.birthdate}
+          placeholder={employee.birthdate}
+        />
+        <label htmlFor="employeeAddress">Employee Address:</label>
+        <input
+          type="text"
+          id="address"
+          onChange={handleChange}
+          value={formState.address}
+          placeholder={employee.address}
+        />
+        <label htmlFor="employeeImage">Employee Image Url:</label>
+        <input
+          type="text"
+          id="image"
+          onChange={handleChange}
+          value={formState.image}
+          placeholder={employee.image}
+        />
+        <button type="submit">Update employee profile</button>
       </form>
-      <button onClick={() => deleteCompany()}>Delete company profile</button>
-      <Link to="/companies">Back</Link>
+      <button onClick={() => deleteCompany()}>Delete employee profile</button>
+      <Link to="/employees">Back</Link>
     </div>
   )
 }
