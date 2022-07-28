@@ -8,7 +8,7 @@
 }
 
 body {
-  /* background: url('assets/hrms1.jpeg'); */
+  background: url('assets/hrms1.jpeg') no-repeat;
   background-size: cover;
   background-color: white;
 }
@@ -16,6 +16,7 @@ body {
 header {
 background-color: skyblue;
 text-align: center;
+
 }
 
 .App-link {
@@ -33,6 +34,7 @@ nav{
 
 .link {
   margin: 10px ;
+  font-size: x-large;
 }
 
 .employee-grid {
@@ -58,11 +60,22 @@ nav{
 }
 
 .company-grid {
+  height: 30px;
   font-size: x-large;
-  /* display: flex;
+  display: flex;
   flex-wrap: wrap;
-  justify-content: space-around; */
+  justify-content: space-around; 
+}
 
-  grid-template-columns: 30% 30% 30%;
-  grid-template-rows: 30% 30% 30%;
+button {
+  position: absolute;
+  top: 15%;
+  background-color:#0a0a23;
+  color: #fff;
+  border:none; 
+  border-radius:10px; 
+  padding:15px;
+  min-height:30px; 
+  min-width: 120px;
+  margin: 20px;
 }
