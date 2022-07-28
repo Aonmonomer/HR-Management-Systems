@@ -20,21 +20,19 @@ const Companies = () => {
     getCompanies()
   }, [])
 
-  const showCompany = (company) => {
-    navigate(`${company._id}`)
-  }
-
   const goToCreateCompany = () => {
-    navigate('/createcompany')
+    navigate('/company/create')
   }
 
   return (
-    <div className="company-grid">
-      <h1>Companies in the systems: </h1>
+    <div>
       <div>
+        <h1>Companies in the system: </h1>
+      </div>
+      <div className="company-grid">
         {companies.map((company) => (
-          <div onClick={() => showCompany(company)} key={company.id}>
-            <h3>{company.companyName}</h3>
+          <div key={company.id}>
+            <Link to={`/company/${company._id}`}>{company.companyName}</Link>
           </div>
         ))}
       </div>

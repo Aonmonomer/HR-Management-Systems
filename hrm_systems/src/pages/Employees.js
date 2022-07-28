@@ -25,12 +25,14 @@ const Employees = () => {
   }
 
   const goToCreateEmployee = () => {
-    navigate('/createemployee')
+    navigate('/employee/create')
   }
 
   return (
     <div>
-      <h1>Employees in the systems: </h1>
+      <div>
+        <h1>Employees in the systems: </h1>
+      </div>
       <div className="employee-grid">
         {employees.map((employee) => (
           <div

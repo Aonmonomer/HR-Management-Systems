@@ -2,14 +2,17 @@ const Employee = require('../models/employee')
 const Company = require('../models/company')
 
 const createEmployee = async (req, res) => {
+  console.log(req.body)
   try {
     const employee = await new Employee(req.body)
     await employee.save()
+    console.log(employee)
     return res.status(201).json({
       employee
     })
   } catch (error) {
-    return res.status(500).json({ error: error.message })
+    console.log(error.message)
+    return res.status(500).send({ error: error.message })
   }
 }
 

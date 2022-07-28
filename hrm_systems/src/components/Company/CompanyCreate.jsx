@@ -2,17 +2,13 @@ import { useState, useEffect } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 
-const CreateEmployee = () => {
-  const [newEmployees, setNewEmployees] = useState([])
+const CompanyCreate = () => {
+  const [newCompanies, setNewCompanies] = useState([])
   const initialState = {
-    name: '',
-    SSN: '',
-    email: '',
-    position: '',
-    birthdate: '',
-    address: '',
-    image: '',
-    company_id: ''
+    companyName: '',
+    companyPhone: '',
+    companyUrl: '',
+    companyAddress: ''
   }
 
   const [formState, setFormState] = useState(initialState)
@@ -21,8 +17,8 @@ const CreateEmployee = () => {
     const getNewCompanies = async () => {
       try {
         let res = await axios.get('http://localhost:3001/api/companies')
-        console.log(res.data)
-        setNewCompanies(res.data)
+        console.log(res.data.companies)
+        setNewCompanies(res.data.companies)
       } catch (err) {
         console.log(err)
       }
@@ -81,4 +77,4 @@ const CreateEmployee = () => {
     </div>
   )
 }
-export default CreateEmployee
+export default CompanyCreate

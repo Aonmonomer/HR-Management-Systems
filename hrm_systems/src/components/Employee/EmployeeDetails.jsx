@@ -4,37 +4,36 @@ import { useParams } from 'react-router-dom'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 
-const CompanyDetails = () => {
+const EmployeeDetails = () => {
   let navigate = useNavigate()
-  const [company, setCompany] = useState('')
+  const [employee, setEmployee] = useState({})
   const initialState = {
-    companyName: '',
-    companyPhone: '',
-    companyUrl: '',
-    companyAddress: ''
+    name: '',
+    SSN: '',
+    email: '',
+    position: '',
+    birthdate: '',
+    address: '',
+    image: ''
   }
-
   const [formState, setFormState] = useState(initialState)
-
   let { id } = useParams()
-
   useEffect(() => {
-    const getCompanyById = async () => {
+    const getEmployeeById = async () => {
       try {
-        let res = await axios.get(`http://localhost:3001/api/companies/${id}`)
-        console.log(res.data.company)
-        setCompany(res.data.company)
+        let res = await axios.get(`http://localhost:3001/api/employees/${id}`)
+        console.log(res.data.employee)
+        setEmployee(res.data.employee)
       } catch (err) {
         console.log(err)
       }
     }
-    getCompanyById()
+    getEmployeeById()
   }, [])
 
   const handleChange = (event) => {
     setFormState({ ...formState, [event.target.id]: event.target.value })
   }
-
   const handleSubmit = async (event) => {
     event.preventDefault()
     // do something with the data in the component state
@@ -46,8 +45,7 @@ const CompanyDetails = () => {
     // clear the form
     setFormState(initialState)
   }
-
-  const deleteCompany = async (event) => {
+  const deleteCompany = async () => {
     // do something with the data in the component state
     let res = await axios.delete(
       `http://localhost:3001/api/companies/${id}`,
@@ -55,7 +53,6 @@ const CompanyDetails = () => {
     )
     navigate('/companies')
   }
-
   return (
     <div>
       <form onSubmit={handleSubmit}>
@@ -93,10 +90,9 @@ const CompanyDetails = () => {
         />
         <button type="submit">Update company profile</button>
       </form>
-
       <button onClick={() => deleteCompany()}>Delete company profile</button>
       <Link to="/companies">Back</Link>
     </div>
   )
 }
-export default CompanyDetails
+export default EmployeeDetails
