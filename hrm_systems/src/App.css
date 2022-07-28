@@ -8,8 +8,9 @@
 }
 
 body {
-  background: url("https://i.ibb.co/Pmw8pzV/hrms1.jpg");
+  /* background: url('assets/hrms1.jpeg'); */
   background-size: cover;
+  background-color: white;
 }
 
 header {
@@ -54,4 +55,14 @@ nav{
   color: white;
   font-family: 'Georgia';
   cursor: pointer;
+}
+
+.company-grid {
+  font-size: x-large;
+  /* display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; */
+
+  grid-template-columns: 30% 30% 30%;
+  grid-template-rows: 30% 30% 30%;
 }

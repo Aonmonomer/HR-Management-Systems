@@ -29,6 +29,7 @@ const Companies = () => {
       <div>
         <h1>Companies in the system: </h1>
       </div>
+      <button onClick={() => goToCreateCompany()}>Create new company</button>
       <div className="company-grid">
         {companies.map((company) => (
           <div key={company.id}>
@@ -36,7 +37,7 @@ const Companies = () => {
           </div>
         ))}
       </div>
-      <button onClick={() => goToCreateCompany()}>Create new company</button>
+
       <Link to="/">Back</Link>
     </div>
   )

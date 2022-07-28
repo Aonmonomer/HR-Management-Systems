@@ -29,7 +29,7 @@ const EmployeeDetails = () => {
       }
     }
     getEmployeeById()
-  }, [])
+  })
 
   const handleChange = (event) => {
     setFormState({ ...formState, [event.target.id]: event.target.value })
