@@ -166,3 +166,23 @@ form {
   position: absolute;
   top: 5rem;
 }
+
+#employeeCreateBackLink {
+  margin: 5em;
+  position: absolute;
+  top: 25rem;
+}
+
+#createEmployeeBtn{
+  position: absolute;
+  top: 30rem;
+  right: 5rem;
+  cursor: pointer;
+}
+
+#employeeDetailsBackLink{
+  margin: 5em;
+  font-size: larger;
+  position: absolute;
+  top: 18rem;
+}

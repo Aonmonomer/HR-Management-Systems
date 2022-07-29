@@ -124,9 +124,13 @@ const EmployeeCreate = () => {
             <option value={company._id}>{company.name}</option>
           ))}
         </select> */}
-        <button type="submit">Create</button>
+        <button id="createEmployeeBtn" type="submit">
+          Create
+        </button>
       </form>
-      <Link to="/employees">Back</Link>
+      <Link id="employeeCreateBackLink" to="/employees">
+        Back
+      </Link>
     </div>
   )
 }

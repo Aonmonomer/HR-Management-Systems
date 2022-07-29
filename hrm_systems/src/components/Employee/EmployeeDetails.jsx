@@ -115,7 +115,9 @@ const EmployeeDetails = () => {
         <button type="submit">Update employee profile</button>
       </form>
       <button onClick={() => deleteCompany()}>Delete employee profile</button>
-      <Link to="/employees">Back</Link>
+      <Link id="employeeDetailsBackLink" to="/employees">
+        Back
+      </Link>
     </div>
   )
 }
