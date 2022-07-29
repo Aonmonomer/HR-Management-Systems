@@ -29,7 +29,7 @@ const CompanyDetails = () => {
       }
     }
     getCompanyById()
-  }, [])
+  })
 
   const handleChange = (event) => {
     setFormState({ ...formState, [event.target.id]: event.target.value })

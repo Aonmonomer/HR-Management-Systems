@@ -4,7 +4,7 @@ require('dotenv').config()
 let MONGODB_URI = `${process.env.MONGO_CONNECTION_STRING}/HRMDatabase`
 
 mongoose
-  .connect(MONGODB_URI, { useUnifiedTopology: true, useNewUrlParser: true })
+  .connect(MONGODB_URI)
   .then(() => {
     console.log('Successfully connected to MongoDB.')
   })
