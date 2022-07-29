@@ -52,6 +52,7 @@ const EmployeeDetails = () => {
       `http://localhost:3001/api/employees/${id}`,
       formState
     )
+    alert('You have successfully deleted the company!')
     navigate('/employees')
   }
   return (
