@@ -44,6 +44,7 @@ const EmployeeDetails = () => {
     console.log(res)
     // clear the form
     setFormState(initialState)
+    alert('You have successfully updated the company!')
   }
   const deleteEmployee = async () => {
     // do something with the data in the component state
