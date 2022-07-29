@@ -45,7 +45,7 @@ const EmployeeDetails = () => {
     // clear the form
     setFormState(initialState)
   }
-  const deleteCompany = async () => {
+  const deleteEmployee = async () => {
     // do something with the data in the component state
     let res = await axios.delete(
       `http://localhost:3001/api/employees/${id}`,
@@ -55,6 +55,13 @@ const EmployeeDetails = () => {
   }
   return (
     <div>
+      <div id="employeeDetailsImageContainer">
+        <img
+          id="employeeDetailsImage"
+          src={employee.image}
+          alt={employee.name}
+        ></img>
+      </div>
       <form onSubmit={handleSubmit}>
         <label htmlFor="employeeName">Employee Name:</label>
         <input
@@ -112,9 +119,13 @@ const EmployeeDetails = () => {
           value={formState.image}
           placeholder={employee.image}
         />
-        <button type="submit">Update employee profile</button>
+        <button id="updateEmployeeBtn" type="submit">
+          Update employee profile
+        </button>
       </form>
-      <button onClick={() => deleteCompany()}>Delete employee profile</button>
+      <button id="deleteEmployeeBtn" onClick={() => deleteEmployee()}>
+        Delete employee profile
+      </button>
       <Link id="employeeDetailsBackLink" to="/employees">
         Back
       </Link>

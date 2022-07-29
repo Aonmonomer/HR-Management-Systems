@@ -108,15 +108,26 @@ form {
   gap: 3rem;
 }
 
+#employeeDetailsImage{
+  width: 20rem;
+  height: 25rem;
+}
+#employeeDetailsImageContainer{
+  display: flex;
+  justify-content: center;
+}
+
 #companiesBackLink{
   margin: 5em;
   position: absolute;
+
   top: 5rem;
 }
 
 #companyCreateBackLink{
   margin: 5em;
   position: absolute;
+
   top: 25rem;
 }
 
@@ -136,7 +147,7 @@ form {
 
 #companyDetailsBackLink{
   margin: 5em;
-  font-size: larger;
+
   position: absolute;
   top: 18rem;
 }
@@ -164,6 +175,7 @@ form {
 #employeesBackLink{
   margin: 5em;
   position: absolute;
+
   top: 5rem;
 }
 
@@ -182,7 +194,20 @@ form {
 
 #employeeDetailsBackLink{
   margin: 5em;
-  font-size: larger;
   position: absolute;
-  top: 18rem;
+  top: 20rem;
+}
+
+#deleteEmployeeBtn{
+  position: absolute;
+  top: 23rem;
+  right: 20rem;
+  cursor: pointer;
+}
+
+#updateEmployeeBtn{
+  position: absolute;
+  top: 23rem;
+  right: 5rem;
+  cursor: pointer;
 }
