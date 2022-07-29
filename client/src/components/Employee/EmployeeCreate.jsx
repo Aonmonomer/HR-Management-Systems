@@ -55,7 +55,7 @@ const EmployeeCreate = () => {
     console.log(res)
     // clear the form
     setFormState(initialState)
-    alert('You have successfully created a company!')
+    alert('You have successfully created an employee!')
   }
 
   return (

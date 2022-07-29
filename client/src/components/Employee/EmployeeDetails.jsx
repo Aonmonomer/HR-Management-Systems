@@ -44,14 +44,14 @@ const EmployeeDetails = () => {
     console.log(res)
     // clear the form
     setFormState(initialState)
-    alert('You have successfully updated the company!')
+    alert('You have successfully updated the employee!')
   }
   const deleteEmployee = async () => {
     let res = await axios.delete(
       `http://localhost:3001/api/employees/${id}`,
       formState
     )
-    alert('You have successfully deleted the company!')
+    alert('You have successfully deleted the employee!')
     navigate('/employees')
   }
   return (
