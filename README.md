@@ -32,8 +32,8 @@
 
 ## **_HR-Management-Systems Screenshots_**
 
-![Component Diagram](Component_Diagram.jpeg)
-![ERD](ERD.jpeg)
+![Home Page](HomePage.png)
+![Employee Page](EmployeesPage.png)
 
 ---
 

@@ -47,7 +47,6 @@ const EmployeeDetails = () => {
     alert('You have successfully updated the company!')
   }
   const deleteEmployee = async () => {
-    // do something with the data in the component state
     let res = await axios.delete(
       `http://localhost:3001/api/employees/${id}`,
       formState
