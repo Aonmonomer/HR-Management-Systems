@@ -35,8 +35,10 @@ const CompanyCreate = () => {
     // do something with the data in the component state
     let res = await axios.post('http://localhost:3001/api/companies', formState)
     console.log(res)
+
     // clear the form
     setFormState(initialState)
+    alert('You have successfully added a company!')
   }
 
   return (
