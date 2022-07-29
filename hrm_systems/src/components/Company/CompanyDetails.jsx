@@ -91,11 +91,17 @@ const CompanyDetails = () => {
           value={formState.companyAddress}
           placeholder={company.companyAddress}
         />
-        <button type="submit">Update company profile</button>
+        <button id="updateCompanyBtn" type="submit">
+          Update company profile
+        </button>
       </form>
 
-      <button onClick={() => deleteCompany()}>Delete company profile</button>
-      <Link to="/companies">Back</Link>
+      <button id="deleteCompanyBtn" onClick={() => deleteCompany()}>
+        Delete company profile
+      </button>
+      <Link to="/companies" id="companyDetailsBackLink">
+        Back
+      </Link>
     </div>
   )
 }

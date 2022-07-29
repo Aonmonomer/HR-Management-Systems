@@ -32,6 +32,9 @@ const Employees = () => {
     <div>
       <div>
         <h1>Employees in the systems: </h1>
+        <Link to="/" id="employeesBackLink">
+          Back
+        </Link>
       </div>
       <div className="employee-grid">
         {employees.map((employee) => (
@@ -45,8 +48,9 @@ const Employees = () => {
           </div>
         ))}
       </div>
-      <button onClick={() => goToCreateEmployee()}>Create new employee</button>
-      <Link to="/">Back</Link>
+      <button id="goToNewEmployeeBtn" onClick={() => goToCreateEmployee()}>
+        Create new employee
+      </button>
     </div>
   )
 }

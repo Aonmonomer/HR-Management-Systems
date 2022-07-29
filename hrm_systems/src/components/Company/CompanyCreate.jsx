@@ -74,7 +74,7 @@ const CompanyCreate = () => {
           onChange={handleChange}
           value={formState.companyAddress}
         />
-        <button type="submit" className="companycreatebtn">
+        <button type="submit" id="createCompanyBtn">
           Create
         </button>
       </form>
