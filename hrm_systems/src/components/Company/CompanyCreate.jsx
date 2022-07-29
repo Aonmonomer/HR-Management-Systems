@@ -42,6 +42,9 @@ const CompanyCreate = () => {
   return (
     <div>
       <h2>Create New Company</h2>
+      <Link to="/companies" id="companyCreateBackLink">
+        Back
+      </Link>
       <form onSubmit={handleSubmit}>
         <label htmlFor="companyName">New Company Name:</label>
         <input
@@ -71,9 +74,10 @@ const CompanyCreate = () => {
           onChange={handleChange}
           value={formState.companyAddress}
         />
-        <button type="submit">Create</button>
+        <button type="submit" className="companycreatebtn">
+          Create
+        </button>
       </form>
-      <Link to="/companies">Back</Link>
     </div>
   )
 }

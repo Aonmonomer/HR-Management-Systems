@@ -27,18 +27,19 @@ const Companies = () => {
   return (
     <div>
       <div>
-        <h1>Companies in the system: </h1>
+        <h1>Companies in the systems: </h1>
       </div>
+      <Link to="/" id="companiesBackLink">
+        Back
+      </Link>
       <button onClick={() => goToCreateCompany()}>Create new company</button>
       <div className="company-grid">
         {companies.map((company) => (
-          <div key={company.id}>
+          <div className="company-card" key={company.id}>
             <Link to={`/company/${company._id}`}>{company.companyName}</Link>
           </div>
         ))}
       </div>
-
-      <Link to="/">Back</Link>
     </div>
   )
 }
