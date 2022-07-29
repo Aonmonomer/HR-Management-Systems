@@ -50,3 +50,5 @@
 ## Image hosting: [imgbb.com](https://imgbb.com/)
 
 ## Website deployment: [heroku.com](https://dashboard.heroku.com)
+
+## Image resources: [google.com](https://www.google.com/)
