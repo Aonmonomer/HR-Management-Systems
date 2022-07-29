@@ -45,6 +45,7 @@ const CompanyDetails = () => {
     console.log(res)
     // clear the form
     setFormState(initialState)
+    alert('You have successfully updated the company!')
   }
 
   const deleteCompany = async () => {
@@ -53,6 +54,7 @@ const CompanyDetails = () => {
       `http://localhost:3001/api/companies/${id}`,
       formState
     )
+    alert('You have successfully deleted the company!')
     navigate('/companies')
   }
 
