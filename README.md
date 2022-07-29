@@ -38,3 +38,7 @@
 ---
 
 ## **_Credits_**
+
+## Project progression: [trello.com](https://trello.com/b/63icoQUY/hr-management-systems)
+
+## Project guide: [github.com](https://github.com/Aonmonomer/HR-Management-Systems)

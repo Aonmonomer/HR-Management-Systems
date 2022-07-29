@@ -9,7 +9,7 @@
 
 body {
   background: url('assets/hrms1.jpeg') no-repeat;
-  background-size: cover;
+  background-size: 100%;
   background-color: white;
 }
 
